@@ -14,8 +14,15 @@ fun main(args: Array<String>) {
 
 @RestController
 class DemoController{
+    
+
+     @GetMapping("/")
+    fun hello() : String {
+        return "Welcome page of my first spring boot application"
+    }
+
     @GetMapping("/hello")
     fun hello() : String {
-        return "Hello"
+        return "Hello from spring app "
     }
 }
